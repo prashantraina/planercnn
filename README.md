@@ -1,3 +1,15 @@
+Works with Python 3.6, CUDA 9.2 and Pytorch 0.4.1 .  
+May perhaps work with Python 3.7, but definitely not with Python 3.8.  
+Absolutely will not work with higher PyTorch or higher CUDA without major rewrite of the `nms` folder and any code which depends on it.  
+When ready to rewrite, refer to [this commit on another project](https://github.com/pytorch/audio/commit/8a41ecdc1ba365fb9d51e12b8ab793bc2a3f67fa) for an example of how to do it.
+```
+sudo ln -s /usr/local/cuda-9.2 /usr/local/cuda
+conda install -c anaconda opencv=3
+conda install cffi
+conda install -c pytorch pytorch=0.4.1 cuda92
+```
+The symbolic link `/usr/local/cuda` can be restored to the original value after building the custom ops.
+
 [![License CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 ![Python 3.7](https://img.shields.io/badge/python-3.7-green.svg)
 # PlaneRCNN: 3D Plane Detection and Reconstruction from a Single Image 
